@@ -15,7 +15,7 @@ import {
   pvsTheme,
   row,
   bodyWrapperIn,
-} from 'assets/_importme.module.scss';
+} from 'assets/main.module.scss';
 import clsx from '@/helpers/combine-classes';
 
 const Home: React.FC = () => {
@@ -30,15 +30,15 @@ const Home: React.FC = () => {
   return (
     <div className={pvsTheme}>
       <div className={clsx(mx3, my1)}>
-        <div className={`${guide} ${guideHp} ${mt0}`}>
+        <div className={clsx(guide, guideHp, mt0)}>
           <div className={row}>
-            <div className={`${col12} ${colLg3}`}>
+            <div className={clsx(col12, colLg3)}>
               <h2 className={guideTitle}>
                 <strong>Průvodce</strong> životními situacemi
               </h2>
             </div>
-            <div className={`${col12} ${colLg9}`}>
-              <div className={`${row} ${boxesLight} ${boxes}`}>
+            <div className={clsx(col12, colLg9)}>
+              <div className={clsx(row, boxesLight, boxes)}>
                 <Box title='Odchod do starobního důchodu' subText='Rodina' />
                 <Box title='Já jsem title' subText='Já jsem subtext' />
                 <Box title='Já jsem title' subText='Já jsem subtext' />

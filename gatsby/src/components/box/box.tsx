@@ -12,7 +12,8 @@ import {
   colSm6,
   colLg4,
   box,
-} from 'assets/_importme.module.scss';
+} from 'assets/main.module.scss';
+import clsx from '@/helpers/combine-classes';
 
 interface IProps {
   title: string;
@@ -28,7 +29,7 @@ const Box: React.FC<IProps> = ({
   subUrl = '#',
 }) => {
   return (
-    <div className={`${col12} ${colSm6} ${colLg4} ${box}`}>
+    <div className={clsx(col12, colSm6, colLg4, box)}>
       <div className={boxInner}>
         <h3 className={boxTitle} style={{ height: 78 }}>
           <a href={mainUrl} className={inverse}>
@@ -37,7 +38,7 @@ const Box: React.FC<IProps> = ({
         </h3>
         <a
           href={subUrl}
-          className={` ${btn} ${btnRaw} ${btnMore} ${btnInverse} ${boxMore} `}
+          className={clsx(btn, btnRaw, btnMore, btnInverse, boxMore)}
           style={{ fontSize: 14 }}
         >
           {subText}
